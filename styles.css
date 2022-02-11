@@ -1,0 +1,122 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(0, 0, 0, .85);
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  display: flex;
+  flex-flow: row;
+  gap: 2.8rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  width: fit-content;
+  justify-content: center;
+}
+
+nav h3 {
+  padding-bottom: 6px;
+  transition: all 100ms ease-in-out;
+  opacity: .8;
+}
+
+nav h3:hover {
+  padding: 0 1px;
+  transform: scale(1.025);
+  border-bottom: 1px solid rgb(95, 95, 95);
+  opacity: 1;
+  animation: fadeInBorder 200ms ease-in-out;
+}
+
+.inner {
+  width: 1650px;
+  height: 4000px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+  
+.images-wrapper {
+  align-items: center;
+  /* animation: slideToLeft 10s ease infinite 4s; */
+}
+
+.images-wrapper img {
+  position: absolute;
+  width: 100%;
+}
+
+
+#mainImg2 {
+  animation: imageChange 40s ease-in-out 10s infinite;
+}
+
+#mainImg3 {
+  animation: imageChange 40s ease-in-out 20s infinite;
+}
+
+#mainImg1 {
+  animation: imageChange 40s ease-in-out 30s infinite;
+}
+
+#mainImg4 {
+  animation: imageChange 40s ease-in-out 40s infinite;
+}
+
+/* .images-wrapper img:second-child {
+  animation: imageChange 10s ease infinite 10s;
+} */
+
+@keyframes imageChange {
+  0% {
+    left: 100%;
+    z-index: 5;
+  }
+
+  5% {
+    left: 0%;
+    z-index: 4;
+  }
+
+  25% {
+    z-index: 3;
+  }
+
+  50% {
+    z-index: 2;
+  }
+
+  75% {
+    z-index: 1;
+  }
+}
+
+@keyframes slideToLeft {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+  15%,
+  45% {
+    transform: translateX(-33.333%);
+  }
+  50%,
+  80% {
+    transform: translateX(-66.666%);
+  }
+  100% {
+    transform: translateX(-66.666%);
+  }
+}
+
+@keyframes fadeInBorder {
+  0% {
+      border-bottom: 0px solid rgba(0, 0, 0, 0);
+  }
+  100% {
+      border-bottom: 1px solid rgb(95, 95, 95);
+  }
+}
