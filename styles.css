@@ -8,13 +8,18 @@ body {
 }
 
 nav {
+  position: absolute;
+  z-index: 100;
   display: flex;
   flex-flow: row;
   gap: 2.8rem;
-  margin: 0 auto;
   padding: 0 3rem;
   width: fit-content;
   justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
 }
 
 nav h3 {
@@ -32,9 +37,11 @@ nav h3:hover {
 }
 
 .inner {
-  width: 1650px;
-  height: 4000px;
+  /* width: 1650px; */
+  height: 1900px;
+  max-height: 95vh;
   width: 100%;
+  margin: 0 0;
   overflow: hidden;
   position: relative;
 }
@@ -58,11 +65,11 @@ nav h3:hover {
   animation: imageChange 40s ease-in-out 20s infinite;
 }
 
-#mainImg1 {
+#mainImg4 {
   animation: imageChange 40s ease-in-out 30s infinite;
 }
 
-#mainImg4 {
+#mainImg1 {
   animation: imageChange 40s ease-in-out 40s infinite;
 }
 
@@ -76,7 +83,7 @@ nav h3:hover {
     z-index: 5;
   }
 
-  5% {
+  4% {
     left: 0%;
     z-index: 4;
   }
