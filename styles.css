@@ -39,18 +39,22 @@ nav h3:hover {
 }
 
 .inner {
-  max-width: 1300px;
-  height: 1900px;
-  max-height: 100vh;
+  /* max-width: 1300px; */
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
+
+@media (min-aspect-ratio: 1/1) {
+  .inner {
+    max-width: 1300px;
+  }
+}
   
 .images-wrapper {
   align-items: center;
-  /* animation: slideToLeft 10s ease infinite 4s; */
 }
 
 .images-wrapper img {
